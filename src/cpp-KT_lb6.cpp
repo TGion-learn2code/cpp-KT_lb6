@@ -14,6 +14,8 @@ using namespace std;
 
 // 3.1
 /// @brief	asks user to input a number and tells if the number is positive, negative or zero
+///
+///
 void eingabe () {
 	int eingabe;
 	cout << "Bitte geben Sie eine Zahl ein: ";
@@ -32,10 +34,13 @@ void eingabe () {
 
 // 2.4
 /// @brief	calculates the product value of given numbers
-/// @param	const float zahlen[]: an array of numbers
-/// @param	int anzahl: number of numbers in array			-> !!! better use array::size,
+///
+/// @param	zahlen const float numbers to use for multiplication
+/// @param	anzahl int number of numbers in array			-> !!! better use array::size,
 ///									-> !!! if # of elements != int anzahl, we are in trouble
 /// @return	float product value of all the numbers given
+///
+///
 float produkt (const float zahlen[], int anzahl) {
 	float ergebnis = 1;
 	for (int i = 0; i < anzahl; ++i) {
@@ -46,8 +51,11 @@ float produkt (const float zahlen[], int anzahl) {
 
 // 2.4A
 /// @brief	calculates the product value of given numbers
+///
 /// @param	const float zahlen[]: an array of numbers - use of vectors
 /// @return	float product value of all the numbers given
+///
+///
 float produkt_vector (vector<float> zahlen) {
 	float ergebnis = 1;
 	for (auto i = zahlen.begin(); i != zahlen.end(); ++i) {
@@ -58,10 +66,10 @@ float produkt_vector (vector<float> zahlen) {
 
 // 2.3
 /// @brief	prints the parameter to stdout
-/// @param	const char *str: char array to print
-/// @return	!!! no return value !!! 				-> ??? do we have to write return if void or not ???
+/// @param	str const char** text to be printed on stdout
+///
+///
 void ausgabe (const char *str[]) {
-
 									// ??? why use a pointer and not const char str[] ???
 									// we dont have to access str to print it
 	cout << str << "\n";
@@ -69,10 +77,13 @@ void ausgabe (const char *str[]) {
 
 // 2.2
 /// @brief	calculates the volume of x,y,z
+///
 /// @param	int x: first value
 /// @param	int y: second value
 /// @param	int z: third value
 /// @return	int return: the product value of x*y*z
+///
+///
 int volumen(int x, int y, int z) {
 
 	// return the int value of the volume of x,y,z
@@ -81,9 +92,12 @@ int volumen(int x, int y, int z) {
 
 // 2.1
 /// @brief 	Main function; params are arguments from programm call
+///
 /// @param	int argc: # of arguments; at least one argument (program name) is given
 /// @param	const char *argv: array of arguments
 /// @return	int return; 0 if succeded; !0 if aborted with error
+///
+///
 int main (int argc, const char *argv[]) {
 
 	int i;
